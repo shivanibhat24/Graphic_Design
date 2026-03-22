@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 
 const SOCIALS = [
   { label: "LinkedIn",  href: "https://ww.linkedin.com/in/shivani-gbhat/" },
-  { label: "Instagram", href: "#" },
-  { label: "Behance",   href: "#" },
+  { label: "Medium", href: "https://indiaindesign.medium.com/" },
 ]
 
 export default function Footer() {
