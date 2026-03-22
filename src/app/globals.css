@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-space-grotesk);
+  --font-syne: var(--font-syne);
+  --font-sacramento: var(--font-sacramento);
+}
+
+/* ─── DEFAULT (light / cream) ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:          #FEFAE8;
+  --fg:          #0D0D0D;
+  --muted:       rgba(13,13,13,0.45);
+  --card-bg:     rgba(13,13,13,0.04);
+  --card-border: rgba(13,13,13,0.10);
+  --accent:      #FF4500;
+  --accent-2:    #7CB800;
+  --accent-3:    #E8006F;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── DARK ─── */
+[data-theme='dark'] {
+  --bg:          #080809;
+  --fg:          #F5F0E8;
+  --muted:       rgba(245,240,232,0.4);
+  --card-bg:     rgba(245,240,232,0.04);
+  --card-border: rgba(245,240,232,0.08);
+  --accent:      #FF5A1F;
+  --accent-2:    #C8F000;
+  --accent-3:    #FF2D78;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── TEAL OMBRE ─── */
+[data-theme='teal-ombre'] {
+  --bg:          #003838;
+  --fg:          #e0f7f7;
+  --muted:       rgba(224,247,247,0.55);
+  --card-bg:     rgba(224,247,247,0.06);
+  --card-border: rgba(224,247,247,0.12);
+  --accent:      #00ced1;
+  --accent-2:    #40e0d0;
+  --accent-3:    #20b2aa;
+}
+
+/* ─── LIGHT GREY ─── */
+[data-theme='light-grey'] {
+  --bg:          #f2f2f2;
+  --fg:          #1a1a1a;
+  --muted:       rgba(26,26,26,0.45);
+  --card-bg:     rgba(26,26,26,0.04);
+  --card-border: rgba(26,26,26,0.10);
+  --accent:      #5a5a8a;
+  --accent-2:    #8888cc;
+  --accent-3:    #bb88bb;
+}
+
+/* ─── FIREY ─── */
+[data-theme='firey'] {
+  --bg:          #1a0500;
+  --fg:          #fff7f0;
+  --muted:       rgba(255,247,240,0.5);
+  --card-bg:     rgba(255,247,240,0.07);
+  --card-border: rgba(255,247,240,0.15);
+  --accent:      #ff4500;
+  --accent-2:    #ffd700;
+  --accent-3:    #ff8c00;
+}
+
+/* ─── PINK PURPLE ─── */
+[data-theme='pink-purple'] {
+  --bg:          #180018;
+  --fg:          #ffe6ff;
+  --muted:       rgba(255,230,255,0.5);
+  --card-bg:     rgba(255,230,255,0.07);
+  --card-border: rgba(255,230,255,0.15);
+  --accent:      #ff1493;
+  --accent-2:    #9b59b6;
+  --accent-3:    #ff00ff;
+}
+
+/* ─── BASE ─── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  ::selection { background: var(--accent); color: #fff; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-space-grotesk), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* subtle grain overlay */
+  body::after {
+    content: "";
+    position: fixed; inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0.018;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 128px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── UTILITIES ─── */
+@layer utilities {
+  .text-outline-accent {
+    -webkit-text-stroke: 1.5px var(--accent);
+    color: transparent;
+  }
+
+  .glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--card-border);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px rgba(255,69,0,0.4);
+  }
 }
+
+/* ─── CURSOR ─── */
+.custom-cursor {
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  border-radius: 50%; will-change: transform;
+}
+
+/* ─── MARQUEE ─── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 20s linear infinite; }
+
+/* ─── GALLERY CARDS ─── */
+.gallery-card {
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.3s;
+}
+.gallery-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+/* ─── LENIS ─── */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }

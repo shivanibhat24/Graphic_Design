@@ -1,0 +1,63 @@
+﻿
+> portfolio-v2@0.1.0 build
+> next build
+
+   Γû▓ Next.js 15.1.0
+
+   Creating an optimized production build ...
+npm : Failed to compile.
+At line:1 char:1
++ npm run build > 
+build_output.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (Fai  
+  led to compile.:String   
+ ) [], RemoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+
+./src/components/hero.tsx
+Error:   [31mx[0m 
+Unexpected token 
+`section`. Expected jsx 
+identifier
+    ,-[[36;1;4mC:\Users\sg
+78b\OneDrive\Desktop\Progra
+mming code\Software Project
+s\portfolio\portfolio-v2\sr
+c\components\hero.tsx[0m:3
+4:1]
+ [2m31[0m |   }, [])
+ [2m32[0m | 
+ [2m33[0m |   return (
+ [2m34[0m |     <section 
+ref={containerRef} 
+className="min-h-[150vh] 
+flex flex-col pt-[25vh] 
+px-8 md:px-20 relative 
+select-none">
+    : [35;1m     
+^^^^^^^[0m
+ [2m35[0m |       <div 
+className="max-w-[100vw] 
+z-10 relative">
+ [2m36[0m |         
+<motion.p
+ [2m37[0m |           
+initial={{ opacity: 0 }}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested 
+module:
+./src/components/hero.tsx
+./src/app/page.tsx
+
+
+> Build failed because of 
+webpack errors
