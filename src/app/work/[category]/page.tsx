@@ -8,10 +8,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const { category } = await params;
   
   // Convert slug to display name: "t-shirt-design" -> "T-shirt Design"
-  const displayCategory = category
-    .split("-")
-    .map((word, i) => i === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word)
-    .join(" ");
+  const displayCategory = category === "t-shirt-design" 
+    ? "T-shirt Design"
+    : category
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 
   return (
     <main className="relative min-h-screen">
