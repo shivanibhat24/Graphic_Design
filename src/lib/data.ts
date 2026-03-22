@@ -692,4 +692,11 @@ export const portfolioItems: PortfolioItem[] = [
       image: "/designs1/Mumbai Sea Link.jpg",
       caption: "The architectural pulse of Mumbai. Where the city meets the Arabian Sea."
     },
+     // ── Film Posters ──
+    { 
+      title: "Dhurandhar the Revenge Poster", 
+      category: "Film Posters", 
+      image: "/designs1/d2 poster.png",
+      caption: "The poster of the sequal to Aditya Dhar's iconic Dhurandhar saga."
+    },
 ];
