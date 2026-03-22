@@ -14,6 +14,7 @@ const CATEGORIES = [
   { label: "Stickers",      href: "/work/stickers" },
   { label: "Visuals",       href: "/work/visuals" },
   { label: "Presentations", href: "/work/presentations" },
+  { label: "Film Posters", href: "/work/film-posters" },
 ]
 
 const THEMES = [
