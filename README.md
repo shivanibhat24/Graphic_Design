@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shivani Bhat | Creative Portfolio
 
-## Getting Started
+A premium, highly interactive graphic design portfolio built with **Next.js 15**, **Tailwind CSS v4**, and **GSAP**. This project showcases a curated collection of 88+ works across multiple categories, featuring a dynamic 6-theme system and immersive micro-animations.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **🎨 Multi-Theme System**: Switch between six curated aesthetic experiences:
+  - **Light/Cream**: Professional & Clean
+  - **Dark**: Sleek & Modern
+  - **Teal Ombre**: Vibrant & Atmospheric
+  - **Light Grey**: Minimalist & Soft
+  - **Firey**: Bold & Energetic
+  - **Pink Purple**: Playful & Creative
+- **🚀 Ultra-Premium UX**: 
+  - Custom interactive cursor with magnetic effects.
+  - Character-by-character GSAP title enters.
+  - Smooth parallax Hero section.
+  - Framer Motion-powered "Background Bubbles" for atmospheric depth.
+- **📁 Multi-Page Architecture**: 
+  - Dedicated category pages (Logos, Vectors, Concept Art, T-Shirts, etc.).
+  - Collection-based filtering within categories.
+  - Clean, center-aligned landing page focused on high-impact branding.
+- **💎 Visual Polish**: 
+  - Symmetrical "Based in Mumbai" professional branding.
+  - Zero-placeholder policy: All 88 projects feature creative captions and high-fidelity visuals.
+  - Full SEO optimization with descriptive metadata.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [GSAP](https://greensock.com/gsap/) & [Framer Motion](https://www.framer.com/motion/)
+- **Typography**: Space Grotesk (Sans), Syne (Display), Sacramento (Signature)
+- **Icons**: Lucide React
+- **Theme Management**: next-themes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/shivanibhat24/Graphic_Design.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
 
-## Deploy on Vercel
+## 📂 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/src/app`: Next.js App Router pages and layouts.
+- `/src/components`: Reusable UI components (Navbar, Hero, BackgroundBubbles, etc.).
+- `/src/lib/data.ts`: Central source of truth for all 88+ portfolio items and collections.
+- `/src/types`: TypeScript definitions for project data.
+- `/public`: Static assets including high-resolution design renders.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 📬 Contact & Hire
+
+- **Email**: [shivani.gbhat@gmail.com](mailto:shivani.gbhat@gmail.com)
+- **LinkedIn**: [shivani-gbhat](https://www.linkedin.com/in/shivani-gbhat/)
+- **GitHub**: [shivanibhat24](https://github.com/shivanibhat24)
+
+*Based in Mumbai, Shaping Aesthetics Worldwide.*
