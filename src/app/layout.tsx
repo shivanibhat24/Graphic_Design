@@ -21,7 +21,7 @@ const sacramento = Sacramento({
 });
 
 export const metadata: Metadata = {
-  title: "Shivani Bhat | Creative Technologist",
+  title: "Shivani Bhat | Graphic Design Portfolio",
   description: "Portfolio of Shivani Bhat - Graphic Designer & Creative Technologist",
 };
 
