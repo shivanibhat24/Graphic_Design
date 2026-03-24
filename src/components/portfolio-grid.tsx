@@ -61,7 +61,7 @@ export default function PortfolioGrid({ category, showTabs = true }: PortfolioGr
             </h2>
           </div>
           <p className="text-base max-w-xs leading-relaxed" style={{ color: "var(--muted)" }}>
-            Exploring {finalFiltered.length} pieces of intentional visual strategy and creative grit.
+            {finalFiltered.length} projects, thoughtfully built.
           </p>
         </div>
 
