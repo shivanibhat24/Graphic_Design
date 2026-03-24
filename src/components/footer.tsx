@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 
 const SOCIALS = [
-  { label: "LinkedIn",  href: "https://ww.linkedin.com/in/shivani-gbhat/" },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/in/shivani-gbhat/" },
   { label: "Medium", href: "https://indiaindesign.medium.com/" },
 ]
 
