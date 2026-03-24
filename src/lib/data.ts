@@ -697,6 +697,18 @@ export const portfolioItems: PortfolioItem[] = [
       title: "Dhurandhar the Revenge Poster", 
       category: "Film Posters", 
       image: "/designs1/d2 poster.png",
-      caption: "The poster of the sequal to Aditya Dhar's iconic Dhurandhar saga."
+      caption: "The poster of the sequel to Aditya Dhar's iconic Dhurandhar saga."
+    },
+    { 
+      title: "Dhurandhar the Revenge Poster 2", 
+      category: "Film Posters", 
+      image: "/designs1/p2.png",
+      caption: "The poster of the sequel to Aditya Dhar's iconic Dhurandhar saga."
+    },
+    { 
+      title: "URI: The Surgical Strike Poster", 
+      category: "Film Posters", 
+      image: "/designs1/p3.png",
+      caption: "The poster of the film URI starring Yami Gautam and Vicky Kaushal."
     },
 ];
